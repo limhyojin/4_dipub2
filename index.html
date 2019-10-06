@@ -77,7 +77,6 @@
 	</style>
 </head>
 <body>
-	<div id="monitor"></div>
 	<header class="head1" id="header1">
 		<div id="headtext">
 		<h1>이모티콘을 만들어볼까요?</h1>
@@ -134,7 +133,6 @@
 	window.onscroll = function(){
 		var t = document.documentElement.scrollTop + document.body.scrollTop;
 		console.log(t);
-		monitor.innerHTML = t.toFixed(1);
 	
 	if(t>100){headtext.style.animation = "opa1 0.5s forwards";}
 	else{headtext.style.animation = "";}
