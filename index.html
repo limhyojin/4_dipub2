@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>이모티콘을 만들어 볼까요?</title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		/*font-family: 'Noto Sans KR', sans-serif;*/
+		header{position:relative;height:1300px;overflow: hidden;}
+		h1,h2, p, div, body, section, img, div {margin:0; padding:0;}
+		body {margin-left: 295px; width: 1230px; height:5966px;margin-right: 295px;}
+		section { width: 934px; margin-right: 296px;}
+		h1,h2, p {font-family: 'Noto Sans KR', sans-serif; color:#333;}
+		h1 {margin-bottom:25px; font-size: 48px; font-weight: 700;}
+		h2 {font-size:35px; font-weight: 700; margin-bottom:16px;}
+		p {line-height: 1.5; font-size: 21px; font-weight: 500;}
+		.centertext1{text-align: center;}
+		#headtext{position:absolute; z-index: 2; top:310px; opacity: 1;}
+		#sec1text{opacity: 0; position: sticky; z-index:1;top:150px;left:50%;}
+		#monitor{position: fixed; background: black;padding: 5px; top:0; left:0;width: 70px;height:20px; color:white;}
+		#heademo{width:1200px; position:fixed; z-index: 0; right:-470px; top:-110px;opacity:0.8;}
+		.sec1 {z-index:1; height: 2300px;}
+
+		#box1 {width:360px; height: 360px; background-color:#999; position:fixed; z-index: 1; opacity: 0;top:320px;right:580px;margin:0;}
+		#rule1 {font-weight: 700;font-size:48px;position:fixed;top:380px;left:50%; transform:translateX(-50%);z-index: 2; text-align: center;opacity: 0;}
+		.layer {width:200px;margin-left:17px;margin-right:16px; height:100px; display:block; float: left;}
+		.layer p {color: #999; font-size: 18px; margin-bottom: 10px;}
+		.layerimg {width: 200px;background-color: #999;}
+		#layers {position: sticky; height: 200px;margin:auto; top:320px;  z-index: 3; opacity: 0;}
+		.time {margin-top:300px;position: sticky; top:0;}
+		.sec2 {position:relative; height: 1500px }
+		.sec3 {position:relative; margin-top:300px; height:800px;}
+		#box2 {position:absolute; z-index:1;width: 150px; height: 30px;top:375px;left:390px;border: solid yellow; opacity: 0;}
+		#box3 {position:absolute;width: 15px; height: 15px; border:solid yellow; top:668px;z-index: 1; left: 222px; opacity: 0;}
+		#sec3text{top:-100px;}
+		
+		.jall {margin-top:60px;width:277px;height:277px; margin-left:17px; margin-right: 17px; display: block; float: left;}
+		#clear {position: fixed; top:300px;opacity: 0;}
+		
+		@keyframes opa1 {
+			to{opacity: 0;}
+		}
+		@keyframes opa2 {
+			from{}
+			to{opacity: 0.3;}
+		}
+		@keyframes opa3 {
+			from{opacity: 0;}
+			to{opacity: 1;}
+		}
+		@keyframes opa4 {
+			from{}
+			to{opacity: 0.8;}
+		}
+		@keyframes opa5 {
+			from{opacity:0.8;}
+			to{opacity: 0;}
+		}
+		@keyframes opa6 {
+			from{width:360px; right:580px; top:320px;opacity: 0.8;}
+			to{width:360px; right:580px; top:320px;opacity: 0;}
+			
+		}
+		@keyframes opa7 {
+			from{opacity: 1;}
+			to{opacity: 0;}
+		}
+
+		@keyframes size1 {
+			from{}
+			to{width:360px; right:580px; top:320px;}
+		}
+		@keyframes move{
+			from{}
+			to{top:100px;}
+		}
+	</style>
+</head>
+<body>
+	<div id="monitor"></div>
+	<header class="head1" id="header1">
+		<div id="headtext">
+		<h1>이모티콘을 만들어볼까요?</h1>
+		<p>포토샵 타임라인기능을 통해 움직이는 이모티콘을<br> 만들어 플랫폼에 제안까지 해보아요.</p>
+		</div>
+		<img src="emo.png" id="heademo">
+	</header>
+	<section class="sec1"  >
+		<div id="box1"></div>
+		<div id="sec1text">
+		<h2 class="centertext1">1. 컷 그리기</h2>
+		<p class="centertext1">이모티콘 규정에 맞게 포토샵 레이어 기능을<br>이용해서 컷을 하나하나 그려줍니다.</p>
+		</div>
+		<p id="rule1">360*360<br>72dpi<br>RGB color</p>
+		<div id="layers">
+			<div class="layer" ><p>layer1</p><img class="layerimg" style="opacity:0.3;" src="emo1.png"><div style="width:200px; height:200px; position: absolute;  top:35px; z-index: 4;"><p style="color:#333; text-align: center; margin-top:65px; ">레이어 당 2MB 이하<br>총 24 프레임 이하</p></div></div>
+			<div class="layer"><p>layer2</p><img class="layerimg" src="emo2.png"></div>
+			<div class="layer"><p>layer3</p><img class="layerimg" src="emo3.png"></div>
+			<div class="layer"><p>layer4</p><img class="layerimg" src="emo4.png"></div>
+
+		</div>
+	</section>
+	<section class="sec2" >
+		<div class="time">
+		<h2 class="centertext1">2. 포토샵 타임라인 기능</h2>
+		<p class="centertext1" id="sec2text">포토샵에서 Window-Timeline 기능을 켜주세요.<br>Creat Frame Animation으로 바꿔주시고 눌러주세요.<br>
+		새 프레임 만들어 레이어를 순서대로 보이게합니다.</p>
+		<img src="timeline.JPG" style="margin-top:60px; width:934px;">
+		<div id="box2"></div>
+		<img src="timeline2.JPG" style="margin-top:60px; width:934px;">
+		<div id="box3"></div>
+		</div>
+	</section>
+	<section class="sec3" >
+		<div id="sec3text">
+		<h2>3. 저장하기</h2>
+		<p>File-Export-Save for WEB(legacy)를 열어 저장해줍니다.<br>
+단축키(ctrl + alt + shift + s)</p>
+		</div>
+		<div id="clear">
+		<img src="jjal1.gif" class="jall">
+		<img src="jjal2.gif" class="jall">
+		<img src="jjal3.gif" class="jall">
+		</div>
+		<h2 style="text-align: right; margin-top:600px;">완성!</h2>
+	</section>
+	<section class="sec4"></sectiom>
+	<section class="sec5"></section>
+	<footer></footer>
+
+</body>
+<script type="text/javascript">
+
+	window.onscroll = function(){
+		var t = document.documentElement.scrollTop + document.body.scrollTop;
+		console.log(t);
+		monitor.innerHTML = t.toFixed(1);
+	
+	if(t>100){headtext.style.animation = "opa1 0.5s forwards";}
+	else{headtext.style.animation = "";}
+	
+	if(t>400){heademo.style.animation = "opa2 1s";
+heademo.style.animation = "size1 1s forwards";}
+	else{heademo.style.animation = "";}
+
+	if(t>900){sec1text.style.animation="opa3 1s 0.5s forwards";
+			box1.style.animation="opa4 1s forwards";
+			rule1.style.animation="opa3 1s forwards";}
+	else{sec1text.style.animation="";
+box1.style.animation="";
+rule1.style.animation="";}
+	
+
+	if(t>2000){box1.style.animation="opa5 1s forwards";
+	heademo.style.animation = "opa6 1s forwards";
+	rule1.style.animation="opa7 1s forwards";}
+
+	if(t>2200){layers.style.animation="opa3 1s forwards";}
+	else{layers.style.animation="";}
+	
+	if(t>2800){sec1text.style.animation="opa7 0.7s forwards";}
+
+	if(t>3900){box2.style.animation="opa3 0.5s forwards";
+		box3.style.animation="opa3 0.5s forwards";}
+	else{box2.style.animation="";
+box3.style.animation="";}
+	if(t>5400){clear.style.animation="opa3 0.5s forwards";
+}
+	else{clear.style.animation="";
+
+		}
+
+	}
+
+	
+</script>
+</html>
